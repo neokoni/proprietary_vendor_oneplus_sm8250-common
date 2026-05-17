@@ -1594,6 +1594,12 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8250-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    libldacBT_abr \
+    libldacBT_enc \
+    liblhdc \
+    liblhdcBT_enc \
+    liblhdcv5 \
+    liblhdcv5BT_enc \
     btaudio_offload_if \
     eglSubDriverAndroid \
     libEGL_adreno \
