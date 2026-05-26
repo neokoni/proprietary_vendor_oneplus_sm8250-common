@@ -18690,6 +18690,43 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.oplus.hardware.performance-V1-ndk_platform",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "android.hardware.secure_element@1.0-impl",
     owner: "oneplus",
     strip: {
@@ -23092,6 +23129,7 @@ cc_prebuilt_binary {
                 "android.hardware.biometrics.fingerprint@2.3",
                 "android.hardware.biometrics.fingerprint@2.2",
                 "android.hardware.biometrics.fingerprint@2.1",
+                "vendor.oplus.hardware.performance-V1-ndk_platform",
                 "vendor.oplus.hardware.osense.client-V1-ndk_platform",
                 "libosenseaidlhalclient",
                 "vendor.oplus.hardware.commondcs-V1-ndk_platform",
@@ -23109,6 +23147,7 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    check_elf_files: false,
     relative_install_path: "hw",
     device_specific: true,
 }

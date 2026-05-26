@@ -2184,6 +2184,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.imsrtpservice@3.1 \
     libfastov_dsp \
     vendor.oplus.hardware.orms@1.0 \
+    vendor.oplus.hardware.performance-V1-ndk_platform \
     android.hardware.secure_element@1.0-impl \
     com.qti.stats.pdlib_odm \
     libipebpsstriping_odm \
